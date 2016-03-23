@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+      id="cordova-plugin-wp8-webview-margin"
+      version="1.0.0">
+
+    <name>cordova-plugin-wp8-webview-margin</name>
+    <description>Cordova plugin that allows you to edti CordovaView margins for WP8 platform</description>
+    <license>Proprietary</license>
+    <keywords>cordova plugin wp8 webview margin</keywords>
+
+    <js-module src="www/CordovaViewMargin.js" name="CordovaViewMargin">
+        <clobbers target="CordovaViewMargin" />
+    </js-module>
+
+    <!-- wp8 -->
+    <platform name="wp8">
+        <config-file target="config.xml" parent="/*">
+            <feature name="CordovaViewMargin">
+                <param name="wp-package" value="CordovaViewMargin"/>
+            </feature>
+        </config-file>
+        <source-file src="src/CordovaViewMargin.cs" />
+    </platform>
+
+</plugin>
