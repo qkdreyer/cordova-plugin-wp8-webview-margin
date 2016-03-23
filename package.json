@@ -1,0 +1,19 @@
+{
+  "name": "cordova-plugin-wp8-webview-margin",
+  "version": "1.0.0",
+  "description": "cordova-plugin-wp8-webview-margin\r =================================",
+  "main": "plugin.xml",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qkdreyer/cordova-plugin-wp8-webview-margin.git"
+  },
+  "author": "qkdreyer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qkdreyer/cordova-plugin-wp8-webview-margin/issues"
+  },
+  "homepage": "https://github.com/qkdreyer/cordova-plugin-wp8-webview-margin#readme"
+}
