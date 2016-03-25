@@ -21,11 +21,15 @@ CordovaViewMargin.prototype.setCordovaViewMargin = function(successCallback, err
 };
 
 CordovaViewMargin.prototype.fixCordovaViewMargin = function(successCallback, errorCallback) {
-    var diffPixel = $('body').height() - $(window).height();
+    var diffPixel = document.documentElement.clientHeight - window.innerHeight;
     var ratioDPI = screen.deviceYDPI / screen.logicalYDPI;
     var offset = - Math.round(diffPixel * ratioDPI);
-    var margins = {left: 0, top: offset, right: 0, bottom: 0};
-    return this.setCordovaViewMargin(successCallback, errorCallback, margins);
+
+    if (isNaN(offset) || offset === this.top) {
+        return false;
+    }
+
+    return this.setCordovaViewMargin(successCallback, errorCallback, {top: offset});
 };
 
 document.addEventListener("deviceready", function() {
